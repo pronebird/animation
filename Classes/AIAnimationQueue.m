@@ -27,8 +27,8 @@
 	return _instance;
 }
 
-- (id) init {
-	if ((self = [super init])) {
+- (id)init {
+	if (self = [super init]) {
 		queue = [[NSMutableArray alloc] init];
 	}
 	return self;

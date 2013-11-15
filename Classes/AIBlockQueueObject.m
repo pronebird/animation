@@ -15,21 +15,21 @@
 #pragma mark Initialization
 
 - (id)initWithAnimation:(void (^)(void))animation {
-	if ((self = [self initWithBlock:animation])) {
+	if (self = [self initWithBlock:animation]) {
 		animated = YES;
 	}
 	return self;
 }
 
 - (id)initWithComputation:(void (^)(void))computation {
-	if ((self = [self initWithBlock:computation])) {
+	if (self = [self initWithBlock:computation]) {
 		animated = NO;
 	}
 	return self;
 }
 
 - (id)initWithBlock:(void (^)(void))aBlock {
-	if ((self = [super init])) {
+	if (self = [super init]) {
 		block = [aBlock copy];
 	}
 	return self;

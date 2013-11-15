@@ -30,17 +30,12 @@
 }
 
 - (id)initWithSelector:(SEL)aSelector target:(id)aTarget arguments:(NSArray *)paremeterArray {
-	if ((self = [super init])) {
+	if (self = [super init]) {
 		selector = aSelector;
 		target = aTarget;
 		paremeters = paremeterArray;
 	}
 	return self;
-}
-
-- (void)dealloc {
-	selector = nil;
-	parameters = nil;
 }
 
 - (void)performSelector {

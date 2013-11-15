@@ -19,7 +19,7 @@
 
 @synthesize delegate;
 
-- (void) play {
+- (void)play {
 	NSLog(@"Error created base object");
 }
 
