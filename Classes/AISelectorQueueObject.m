@@ -32,19 +32,15 @@
 - (id)initWithSelector:(SEL)aSelector target:(id)aTarget arguments:(NSArray *)paremeterArray {
 	if ((self = [super init])) {
 		selector = aSelector;
-		target = [aTarget retain];
-		paremeters = [paremeterArray retain];
+		target = aTarget;
+		paremeters = paremeterArray;
 	}
 	return self;
 }
 
 - (void)dealloc {
 	selector = nil;
-	[target release];
-	target = nil;
-	[parameters release];
 	parameters = nil;
-	[super dealloc];
 }
 
 - (void)performSelector {
@@ -54,11 +50,11 @@
 	[aInvocation setTarget:target];
 	
 	int i = 2;
-	for (id parameter in paremeters) {
+	for (__unsafe_unretained id parameter in paremeters) {
 		[aInvocation setArgument:&parameter atIndex:i];
 		i++;
 	}
-	
+	[aInvocation retainArguments];
 	[aInvocation invoke];
 }
 

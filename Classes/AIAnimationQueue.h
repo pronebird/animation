@@ -13,16 +13,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AISingleton.h"
 #import "AISelectorQueueObject.h"
 #import "AIBlockQueueObject.h"
 
-@interface AIAnimationQueue : AISingleton <AIQueueObjectDelegate> {
+@interface AIAnimationQueue : NSObject <AIQueueObjectDelegate> {
 	NSMutableArray *queue;
 	BOOL animating;
 }
 
-+ (AIAnimationQueue *)sharedInstance;
++ (instancetype)sharedInstance;
 
 // Selector based animations
 // Selector is the selector for the lies wrapping the animation

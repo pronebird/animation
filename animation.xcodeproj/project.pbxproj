@@ -20,12 +20,9 @@
 		FD9D867E1224240F00B161C8 /* AIBlockQueueObject.h in Headers */ = {isa = PBXBuildFile; fileRef = FD9D867B1224240F00B161C8 /* AIBlockQueueObject.h */; };
 		FD9D867F1224240F00B161C8 /* AIBlockQueueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9D867C1224240F00B161C8 /* AIBlockQueueObject.m */; };
 		FDA2816C120F2CC10039A8CD /* AIAnimationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA2816A120F2CC10039A8CD /* AIAnimationQueue.m */; };
-		FDA28172120F2D2D0039A8CD /* AISingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA28171120F2D2D0039A8CD /* AISingleton.m */; };
 		FDA281A1120F2E1A0039A8CD /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA2819F120F2E1A0039A8CD /* TestViewController.m */; };
 		FDA281A2120F2E1A0039A8CD /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDA281A0120F2E1A0039A8CD /* TestViewController.xib */; };
-		FDA28201120F32850039A8CD /* AISingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA28171120F2D2D0039A8CD /* AISingleton.m */; };
 		FDA28203120F32850039A8CD /* AIAnimationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA2816A120F2CC10039A8CD /* AIAnimationQueue.m */; };
-		FDA28204120F329D0039A8CD /* AISingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = FDA28170120F2D2D0039A8CD /* AISingleton.h */; };
 		FDA28205120F329E0039A8CD /* AIQueueObject.h in Headers */ = {isa = PBXBuildFile; fileRef = FDA28167120F2CC10039A8CD /* AIQueueObject.h */; };
 		FDA28206120F329E0039A8CD /* AIAnimationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = FDA28169120F2CC10039A8CD /* AIAnimationQueue.h */; };
 		FDA2828C120F4FF70039A8CD /* AIQueueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA2828B120F4FF70039A8CD /* AIQueueObject.m */; };
@@ -50,8 +47,6 @@
 		FDA28167120F2CC10039A8CD /* AIQueueObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIQueueObject.h; sourceTree = "<group>"; };
 		FDA28169120F2CC10039A8CD /* AIAnimationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIAnimationQueue.h; sourceTree = "<group>"; };
 		FDA2816A120F2CC10039A8CD /* AIAnimationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIAnimationQueue.m; sourceTree = "<group>"; };
-		FDA28170120F2D2D0039A8CD /* AISingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AISingleton.h; sourceTree = "<group>"; };
-		FDA28171120F2D2D0039A8CD /* AISingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AISingleton.m; sourceTree = "<group>"; };
 		FDA2819E120F2E1A0039A8CD /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		FDA2819F120F2E1A0039A8CD /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		FDA281A0120F2E1A0039A8CD /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
@@ -84,8 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				FDA2819B120F2DE50039A8CD /* Test */,
-				FDA28170120F2D2D0039A8CD /* AISingleton.h */,
-				FDA28171120F2D2D0039A8CD /* AISingleton.m */,
 				FDA28169120F2CC10039A8CD /* AIAnimationQueue.h */,
 				FDA2816A120F2CC10039A8CD /* AIAnimationQueue.m */,
 				FDA2826B120F4ED20039A8CD /* Animation Objects */,
@@ -174,7 +167,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDA28204120F329D0039A8CD /* AISingleton.h in Headers */,
 				FDA28205120F329E0039A8CD /* AIQueueObject.h in Headers */,
 				FDA28206120F329E0039A8CD /* AIAnimationQueue.h in Headers */,
 				FD9D86791224240200B161C8 /* AISelectorQueueObject.h in Headers */,
@@ -224,6 +216,8 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "animation" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -261,7 +255,6 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* animationAppDelegate.m in Sources */,
 				FDA2816C120F2CC10039A8CD /* AIAnimationQueue.m in Sources */,
-				FDA28172120F2D2D0039A8CD /* AISingleton.m in Sources */,
 				FDA281A1120F2E1A0039A8CD /* TestViewController.m in Sources */,
 				FDA2828C120F4FF70039A8CD /* AIQueueObject.m in Sources */,
 				FD9D86781224240200B161C8 /* AISelectorQueueObject.m in Sources */,
@@ -273,7 +266,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDA28201120F32850039A8CD /* AISingleton.m in Sources */,
 				FDA28203120F32850039A8CD /* AIAnimationQueue.m in Sources */,
 				FDA2828D120F4FF70039A8CD /* AIQueueObject.m in Sources */,
 				FD9D867A1224240200B161C8 /* AISelectorQueueObject.m in Sources */,
@@ -288,6 +280,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -303,6 +296,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = animation_Prefix.pch;

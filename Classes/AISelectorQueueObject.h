@@ -17,8 +17,8 @@
 }
 
 @property (nonatomic) SEL selector;
-@property (nonatomic, retain) id target;
-@property (nonatomic, retain) NSArray *paremeters;
+@property (nonatomic, strong) id target;
+@property (nonatomic, strong) NSArray *paremeters;
 
 - (id)initWithAnimation:(SEL)aSelector target:(id)aTarget arguments:(NSArray *)argumentArray;
 - (id)initWithComputation:(SEL)aSelector target:(id)aTarget arguments:(NSArray *)argumentArray;

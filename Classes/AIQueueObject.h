@@ -23,10 +23,10 @@
 @end
 
 @interface AIQueueObject : NSObject {
-	id <AIQueueObjectDelegate> delegate;
+	id <AIQueueObjectDelegate> __weak delegate;
 }
 
-@property (nonatomic, assign) id delegate;
+@property (nonatomic, weak) id delegate;
 
 - (void)play;
 - (void)next;

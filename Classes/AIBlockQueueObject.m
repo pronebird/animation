@@ -36,15 +36,6 @@
 }
 
 #pragma mark -
-#pragma mark Memory Management
-
-- (void)dealloc {
-	[block release];
-	block = nil;
-	[super dealloc];
-}
-
-#pragma mark -
 #pragma mark Block Actions
 
 - (void)play {

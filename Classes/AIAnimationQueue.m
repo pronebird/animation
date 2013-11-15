@@ -16,8 +16,15 @@
 
 @implementation AIAnimationQueue
 
-+ (AIAnimationQueue *)sharedInstance {
-	return (AIAnimationQueue *)[super sharedInstance];
++ (instancetype)sharedInstance {
+	static id _instance = nil;
+	static dispatch_once_t onceToken;
+	
+	dispatch_once(&onceToken, ^{
+		_instance = [[AIAnimationQueue alloc] init];
+	});
+	
+	return _instance;
 }
 
 - (id) init {
@@ -56,7 +63,6 @@
 	
 	aObject.delegate = self;
 	[queue addObject:aObject];
-	[aObject release];
 	if (!animating) {
 		[self next];
 	}
@@ -83,7 +89,6 @@
 	
 	aObject.delegate = self;
 	[queue addObject:aObject];
-	[aObject release];
 	if (!animating) {
 		[self next];
 	}
@@ -112,7 +117,7 @@
 
 - (void)next {
 	if ([queue count] > 0) {
-		AIQueueObject *animation = [[[queue objectAtIndex:0] retain] autorelease];
+		AIQueueObject *animation = [queue objectAtIndex:0];
 		
 		// Set boolean and remove before playing because animations where nothing happens
 		// occur instantaneously causing an infinited loop if these are set after play
@@ -126,9 +131,5 @@
 	animating = FALSE;
 }
 
-- (void)dealloc {
-	[queue release];
-	[super dealloc];
-}
 
 @end

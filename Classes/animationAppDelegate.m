@@ -21,7 +21,6 @@
     // Override point for customization after application launch.
 	TestViewController *viewController = [[TestViewController alloc] init];
 	[window addSubview:viewController.view];
-	[viewController release];
 	
     [window makeKeyAndVisible];
 	
@@ -77,10 +76,6 @@
 }
 
 
-- (void)dealloc {
-    [window release];
-    [super dealloc];
-}
 
 
 @end
